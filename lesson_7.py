@@ -8,3 +8,13 @@ pythonist_skills = [
     {"Luiza" : "Animation"},
     {"Gohar" : "Business Consultant"}
 ]
+
+unique_keys_dict = dict()
+for dict in pythonist_skills:
+    for list in dict:
+        if list in unique_keys_dict:
+            unique_keys_dict[list] += ", " + (dict[list])
+        else:
+            unique_keys_dict[list] = dict[list]
+print(unique_keys_dict)
+
